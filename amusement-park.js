@@ -48,3 +48,26 @@ function ticketStatus(tickets, ticketId) {
 // console.log(ticketStatus(tickets, "RE90VAW7"));
 // console.log(ticketStatus(tickets, "0H2AZ123"));
 // console.log(ticketStatus(tickets, "23LA9T41"));
+
+///---///
+
+// const tickets = {
+//   "0H2AZ123": null,
+//   "23LA9T41": "Verena Nardi"
+// };
+
+function simpleTicketStatus(tickets, ticketId) {
+  const name = tickets[ticketId];
+  switch (name) {
+    case undefined:
+    case null:
+      return "invalid ticket !!!";
+    default:
+      return name;
+  }
+  // return tickets[ticketId] ?? 'invalid ticket !!!';
+}
+
+// console.log(simpleTicketStatus(tickets, "23LA9T41"));
+// console.log(simpleTicketStatus(tickets, "0H2AZ123"));
+// console.log(simpleTicketStatus(tickets, "RE90VAW7"));
